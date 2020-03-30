@@ -20,11 +20,6 @@ class _ProfileState extends State<Profile> with SingleTickerProviderStateMixin{
   @override
   void dispose(){
     super.dispose();
-    @override
-    void dispose(){
-      _tabController.dispose();
-      super.dispose();
-    }
     _tabController.dispose();
   }
   void _tabChanged(){

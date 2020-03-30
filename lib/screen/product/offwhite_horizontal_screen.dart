@@ -3,17 +3,12 @@ import 'package:goat/modal/offwhite_cloth_modal.dart';
 import 'package:goat/screen/offwhitecloth_screen.dart';
 import 'package:goat/widget/offwhite_cloth_widget.dart';
 import 'package:goat/detail/offwhitecloth_detail.dart';
-class OffWhiteHorizontalScreen extends StatefulWidget {
+class OffWhiteHorizontalScreen extends StatelessWidget {
   final String title;
   final List <Product>products;
 
   const OffWhiteHorizontalScreen({Key key, this.title, this.products}) : super(key: key);
 
-  @override
-  _OffWhiteHorizontalScreenState createState() => _OffWhiteHorizontalScreenState();
-}
-
-class _OffWhiteHorizontalScreenState extends State<OffWhiteHorizontalScreen> {
   @override
   Widget build(BuildContext context) {
     return Container( margin: EdgeInsets.symmetric(vertical: 10.0),
@@ -26,7 +21,7 @@ class _OffWhiteHorizontalScreenState extends State<OffWhiteHorizontalScreen> {
               Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Text(
-                  widget.title,style: TextStyle(fontSize: 20.0),
+                  title,style: TextStyle(fontSize: 20.0),
                 ),
               ),
               Padding(
@@ -52,7 +47,7 @@ class _OffWhiteHorizontalScreenState extends State<OffWhiteHorizontalScreen> {
               scrollDirection: Axis.horizontal,
               itemCount: 6,
               itemBuilder:(context,int index)
-              =>OffwhiteProductWidget(product:widget.products[index],),
+              =>OffwhiteProductWidget(product:products[index]),
 
 
             ),

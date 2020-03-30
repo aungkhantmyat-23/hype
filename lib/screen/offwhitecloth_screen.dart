@@ -2,15 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:goat/modal/offwhite_cloth_modal.dart';
-class OffWhiteClothScreen extends StatefulWidget {
-  final Product product;
+class OffWhiteClothScreen extends StatelessWidget{
 
-  const OffWhiteClothScreen({Key key, this.product}) : super(key: key);
-  @override
-  _OffWhiteClothScreenState createState() => _OffWhiteClothScreenState();
-}
-
-class _OffWhiteClothScreenState extends State<OffWhiteClothScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,13 +40,13 @@ class _OffWhiteClothScreenState extends State<OffWhiteClothScreen> {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.cover,
-                          image:AssetImage(widget.product.imageUrl)
+                          image:AssetImage(products[index].imageUrl)
                       )
                   ),
                 ),
                 SizedBox(height: 10,),
                 Container(
-                  child: Text(widget.product.name),
+                  child: Text(products[index].name),
                 )
               ],
             ),
